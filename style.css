@@ -4,6 +4,12 @@
 /* body color changes to antiquewhite */
 body{
     background-color: antiquewhite;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* this '*' symbol will change all element of html */
 *{
@@ -41,13 +47,13 @@ nav ul li{
 }
 
 .container{
-    min-height: 55vh;
+    max-height: 58%;
     background-color: black;
     color: white;
-    margin: 10px auto;
-    width: 90%;
+    margin: auto 3%;
+    max-width: 90%;
     border-radius: 12px;
-    padding: 34px;
+    padding: 30px;
     background-image: url('bg.jpg');
     background-size: contain;
     background-position: right;
@@ -57,15 +63,14 @@ nav ul li{
 }
 
 .bottom{
-    position: sticky;
-    bottom: 0;
-    height: 80px;
+    height: 90px;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     flex-direction: column;
+    width: 100vw;
 }
 
 #myProgressBar{
@@ -120,4 +125,35 @@ nav ul li{
     width: 12px;
     opacity: 0;
     transition: opacity 0.4s ease-in;
+}
+
+.songItemContainer{
+    max-height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:600px) {
+    .songItem{
+        margin: 12px -19px;
+    }
+
+    .container{
+        background-position: top;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width:950px) and (min-width:600px) {
+    .container{
+        background-position: right;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:910px) and (min-height:1368px) {
+    body{
+        height: 86vh;
+    }
 }

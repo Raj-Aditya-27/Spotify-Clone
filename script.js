@@ -140,7 +140,7 @@ masterPlay.addEventListener('click', () => {
         //stoping song
         audioElement.pause();
         //storing last index
-        lastIndex=Index;
+        lastIndex = Index;
         //last time upto which song played
         lastTime = audioElement.currentTime;
         masterPlay.classList.remove("fa-pause-circle");
@@ -161,3 +161,58 @@ masterPlay.addEventListener('click', () => {
         }
     }
 })
+
+function myFunction(x) {
+    let size = document.getElementsByClassName('size');
+    if (x.matches) { // If media query matches
+        for (i = 0; i < size.length; i++) {
+            size[i].classList.remove("fa-2x");
+            size[i].classList.add("fa-1x");
+        }
+
+        songs = [
+            { songName: "Warriyo", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
+            { songName: "Calm Down", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
+            { songName: "Hips Don't Lie", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
+            { songName: "Paradise", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
+            { songName: "детство", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
+            { songName: "Barbie Girl", filePath: "songs/6.mp3", coverPath: "covers/6.jpg" },
+            { songName: "Despacito", filePath: "songs/7.mp3", coverPath: "covers/7.jpg" }
+        ]
+
+        songItems.forEach((element, i) => {
+            element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+        })
+        masterSongName.innerText = songs[Index].songName;
+
+    } else {
+        for (i = 0; i < size.length; i++) {
+            size[i].classList.remove("fa-1x");
+            size[i].classList.add("fa-2x");
+        }
+
+        songs = [
+            { songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
+            { songName: "Rema, Selena Gomez - Calm Down", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
+            { songName: "Shakira - Hips Don't Lie ft. Wyclef Jean", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
+            { songName: "Coolio - Gangsta's Paradise (feat. L.V.)", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
+            { songName: "Rauf & Faik — детство", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
+            { songName: "Aqua - Barbie Girl", filePath: "songs/6.mp3", coverPath: "covers/6.jpg" },
+            { songName: "Luis Fonsi & Daddy Yankee - Despacito", filePath: "songs/7.mp3", coverPath: "covers/7.jpg" }
+        ]
+
+        songItems.forEach((element, i) => {
+            element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+        })
+        masterSongName.innerText = songs[Index].songName;
+    }
+}
+
+var x = window.matchMedia("(max-width: 600px)")
+myFunction(x) // Call listener function at run time
+x.addEventListener('change', myFunction) // Attach listener function on state changes
+
+songItems.forEach((element, i) => {
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+})
+
