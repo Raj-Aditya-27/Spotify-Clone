@@ -4,10 +4,10 @@
 /* body color changes to antiquewhite */
 body{
     background-color: antiquewhite;
-    height: 100vh;
+    height: 584px;
     box-sizing: border-box;
     overflow: hidden;
-    display: flex;
+    display: flex;  
     flex-direction: column;
     justify-content: space-between;
 }
@@ -154,6 +154,12 @@ nav ul li{
 
 @media screen and (min-width:910px) and (min-height:1368px) {
     body{
-        height: 86vh;
+        height: 47;
+    }
+}
+
+@media screen and (max-height:665px ){
+    body{
+        height:100vh;
     }
 }
