@@ -198,4 +198,8 @@
     .brand {
         font-size: 3vh;
     }
+    .container{
+        background-position:bottom;
+        background-size: 100vh;
+    }
 }
