@@ -16,8 +16,8 @@
         <div id="nav">
             <ul>
                 <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
-                <li>Home</li>
-                <li>About</li>
+                <li class="navLi">Home</li>
+                <li class="navLi">About</li>
             </ul>
         </div>
         <!-- songlist -->
@@ -74,16 +74,19 @@
         <!-- Button,progress bar,gif,name of song which currently moving -->
         <div class="bottom">
             <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
+
+            <div class="songInfo">
+                <img src="playing.gif" alt="" id="gif">
+                <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+            </div>
+
             <div class="icons">
                 <!-- fontawsome icons -->
                 <i class="fas fa-2x fa-step-backward size" id="previous"></i>
                 <i class="fas songItemPlay fa-2x fa-play-circle size" id="masterPlay"></i>
                 <i class="fas fa-2x fa-step-forward size" id="next"></i>
             </div>
-            <div class="songInfo">
-                <img src="playing.gif" alt="" id="gif">
-                <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
-            </div>
+            
         </div>
 
     </div>
