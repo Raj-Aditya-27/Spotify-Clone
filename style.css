@@ -50,7 +50,7 @@
 }
 
 .container {
-    height: calc(100vh - 15vh - 10vh);
+    height: calc(100vh - 25vh);
     background-color: black;
     color: white; 
     margin: 1vh;
@@ -65,7 +65,7 @@
 }
 
 .bottom {
-    height: 15vh;
+    min-height: 15vh;
     background-color: black;
     display: flex;
     align-items: center;
@@ -130,6 +130,10 @@
     transition: opacity 0.4s ease-in;
 }
 
+.songItemPlay{
+    margin-left: 3px;
+}
+
 .songItemContainer {
     max-height: 95%;
     display: flex;
@@ -147,7 +151,45 @@
     width: 5vw;
 }
 
-@media screen and (max-width:600px) {
+/* small devices */
+@media screen and (max-width:299px) {
+    .songItem {
+        margin: 12px -19px;
+        width: 90vw;
+        justify-content: space-around;
+    }
+
+    .container {
+        background-position: top;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songItemContainer{
+        margin-left: 0;
+    }
+
+    .songName{
+        font-size: 0.8rem;
+    }
+
+    .timestamp {
+        font-size: 0.7rem;
+        width: 10vw;
+    }
+
+    .timestamp i{
+        font-size: 0.8rem;
+    }
+
+    .songItemPlay{
+        margin-left: 0px;
+    }
+}
+
+/* mobile devices */
+@media screen and (min-width:300px) and (max-width:600px) {
     .songItem {
         margin: 12px -19px;
     }
@@ -164,22 +206,18 @@
     }
 }
 
-@media only screen and (min-width:601px) and (max-width:1025px){
-    .songItemContainer{
+/* ipad screen width devices */
+@media only screen and (min-width: 601px) and (max-width: 1025px) {
+    .songItemContainer {
         height: 50vh;
         width: 100%;
         margin: 2vw;
     }
 
-    .container .songList{
-        
+    .container .songList {
         width: 100%;
         display: flex;
         align-items: center;
-    }
-
-    .songItem{
-        height: 10vw;
     }
 
     .brand img {
@@ -191,15 +229,45 @@
         padding: 0 2vw;
     }
 
-    .navLi{
-        font-size: 2vh;
-    }
-
     .brand {
         font-size: 3vh;
     }
-    .container{
-        background-position:bottom;
+
+    .container {
+        background-position: bottom;
         background-size: 100vh;
+        height: 75vh;
+    }
+
+    .bottom .icons i {
+        font-size: 2rem;
+    }
+
+    #masterSongName{
+        font-size: 1rem;
+    }
+
+    .songName{
+        font-size: 1rem;
+    }
+
+    .songItem {
+        justify-content: space-between;
+        height: 10%;
+    }
+    
+    .timestamp {
+        font-size: 1rem;
+        width: 10vw;
+    }
+
+    .timestamp i{
+        font-size: 1em;
+    }
+
+    .songItem img {
+        width: 30px;
+        margin: 0 23px;
+        border-radius: 34px;
     }
 }
